@@ -1,10 +1,16 @@
 {
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Daniel Tlach",
+            "email": "daniel@tlach.cz"
+        }
+    ],
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "6.3.*",
@@ -15,12 +21,21 @@
         "symfony/yaml": "6.3.*"
     },
     "require-dev": {
+        "kubawerlos/php-cs-fixer-custom-fixers": "^3.16",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "phpunit/phpunit": "^10.4",
+        "rector/rector": "^0.18.6",
+        "spaze/phpstan-disallowed-calls": "^2.16",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
@@ -53,6 +68,18 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "phpstan": [
+            "php -d memory_limit=128M ./vendor/bin/phpstan analyse -c phpstan.neon"
+        ],
+        "codesniffer": [
+            "php -d memory_limit=128M ./vendor/bin/phpcs"
+        ],
+        "codesniffer-fix": [
+            "php -d memory_limit=128M ./vendor/bin/phpcbf"
+        ],
+        "tests": [
+            "php -d memory_limit=128M ./vendor/bin/phpunit"
         ]
     },
     "conflict": {
@@ -60,7 +87,7 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
             "require": "6.3.*"
         }
     }
