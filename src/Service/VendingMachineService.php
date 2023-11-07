@@ -65,7 +65,7 @@ final class VendingMachineService
         $realIndex = $index - 1;
 
         if (!isset($this->products[$realIndex])) {
-            throw new InvalidProductCodeException('Invalid product code');
+            throw new InvalidProductCodeException('Invalid product code ' . $index);
         }
 
         return $this->pay($this->products[$realIndex]);
