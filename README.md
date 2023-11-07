@@ -1,3 +1,6 @@
+![Tests](https://github.com/danaketh/example-vending-machine/actions/workflows/tests.yml/badge.svg)
+![Code Quality](https://github.com/danaketh/example-vending-machine/actions/workflows/code_quality.yml/badge.svg)
+
 # Vending Machine
 A interview task for a software engineer position. Implement a vending machine in PHP which:
 - accepts coins of 1,5,10,25,50 Cents and 1 Dollar.
