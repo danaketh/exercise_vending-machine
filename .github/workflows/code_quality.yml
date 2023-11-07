@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: Run PHPStan
-        run: vendor/bin/phpstan analyse -c phpstan.neon
+        run: composer phpstan
 
   codesniffer:
       name: Codesniffer
@@ -41,4 +41,4 @@ jobs:
         - name: Install dependencies
           run: composer install --prefer-dist --no-progress --no-suggest
         - name: Run Codesniffer
-          run: vendor/bin/phpcs
+          run: composer codesniffer
