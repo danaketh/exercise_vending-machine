@@ -41,14 +41,14 @@ final class VendingMachineCommand extends Command
 
         while ($insertCoins) {
             $request = new Question('Insert coin (or press [Enter] to continue): ', 0);
-            $coin = (int) $helper->ask($input, $output, $request);
+            $insertedCoin = $helper->ask($input, $output, $request);
 
-            if ($coin === 0) {
+            if ($insertedCoin === '0') {
                 $insertCoins = false;
                 continue;
             }
 
-            $vendingMachineService->addCoin($coin);
+            $vendingMachineService->addCoin((int)$insertedCoin);
             $this->printVendingMachine($output, $vendingMachineService);
         }
 
@@ -58,7 +58,15 @@ final class VendingMachineCommand extends Command
             $products,
         );
         $choice = $helper->ask($input, $output, $choiceQuestion);
-        $product = $vendingMachineService->selectProduct(array_search($choice, $products, true));
+        $productIndex = array_search($choice, $products, true);
+
+        if ($productIndex === false) {
+            $output->writeln("Invalid product selected");
+
+            return 1;
+        }
+
+        $product = $vendingMachineService->selectProduct($productIndex);
         $output->writeln(sprintf("You selected: %s", $product->getName()));
 
         if ($vendingMachineService->getInsertedAmount() > 0) {
@@ -104,6 +112,9 @@ final class VendingMachineCommand extends Command
         $output->writeln("");
     }
 
+    /**
+     * @param Product[] $products
+     */
     private function printProducts(OutputInterface $output, array $products): void
     {
         foreach ($products as $product) {

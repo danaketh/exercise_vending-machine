@@ -13,13 +13,19 @@ final class VendingMachineService
 {
     private int $insertedAmount = 0;
 
+    /**
+     * @var int[] $coins
+     */
     private array $coins = [1,5,10,25,50,100];
 
     /**
-     * @var array<Product>
+     * @var Product[]
      */
     private array $products;
 
+    /**
+     * @param Product[] $products
+     */
     public function __construct(...$products)
     {
         $this->products = $products;
@@ -35,7 +41,7 @@ final class VendingMachineService
 
     public function addCoin(int $coin): self
     {
-        if (!in_array($coin, $this->coins)) {
+        if (!in_array($coin, $this->coins, true)) {
             throw new InvalidCoinException(sprintf('Invalid coin %d', $coin));
         }
 
