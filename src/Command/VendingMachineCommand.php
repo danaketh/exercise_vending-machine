@@ -7,10 +7,13 @@ namespace App\Command;
 use App\Model\Product;
 use App\Service\VendingMachineService;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
+
+use function assert;
 
 final class VendingMachineCommand extends Command
 {
@@ -30,6 +33,7 @@ final class VendingMachineCommand extends Command
             new Product('Chips', 'chips', 99),
         );
         $helper = $this->getHelper('question');
+        assert($helper instanceof QuestionHelper);
 
         $this->printVendingMachine($output, $vendingMachineService);
 
