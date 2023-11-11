@@ -25,13 +25,13 @@ final class VendingMachineCommand extends Command
 
     public function run(InputInterface $input, OutputInterface $output): int
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
             new Product('Water', 'water', 85),
             new Product('Juice', 'juice', 111),
             new Product('Sandwich', 'sandwich', 272),
             new Product('Chips', 'chips', 99),
-        );
+        ]);
         $helper = $this->getHelper('question');
         assert($helper instanceof QuestionHelper);
 

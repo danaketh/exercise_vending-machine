@@ -19,14 +19,14 @@ final class VendingMachineService
     private array $coins = [1,5,10,25,50,100];
 
     /**
-     * @var Product[]
+     * @var Product[] $products
      */
     private array $products;
 
     /**
      * @param Product[] $products
      */
-    public function __construct(...$products)
+    public function __construct(array $products)
     {
         $this->products = $products;
     }

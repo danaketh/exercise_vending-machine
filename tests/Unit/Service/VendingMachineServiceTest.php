@@ -19,12 +19,12 @@ final class VendingMachineServiceTest extends TestCase
      */
     public function testGetProducts(): void
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
             new Product('Water', 'water', 85),
             new Product('Juice', 'juice', 111),
             new Product('Sandwich', 'sandwich', 272),
-        );
+        ]);
 
         self::assertCount(4, $vendingMachineService->getProducts());
     }
@@ -34,9 +34,9 @@ final class VendingMachineServiceTest extends TestCase
      */
     public function testAddCoin(): void
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
-        );
+        ]);
 
         $vendingMachineService->addCoin(50)
             ->addCoin(100)
@@ -50,9 +50,9 @@ final class VendingMachineServiceTest extends TestCase
      */
     public function testReset(): void
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
-        );
+        ]);
 
         $vendingMachineService->addCoin(100)
             ->addCoin(100)
@@ -72,12 +72,12 @@ final class VendingMachineServiceTest extends TestCase
      */
     public function testSelectProduct(): void
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
             new Product('Water', 'water', 85),
             new Product('Juice', 'juice', 111),
             new Product('Sandwich', 'sandwich', 272),
-        );
+        ]);
 
         $this->expectException(NotEnoughMoneyException::class);
         $vendingMachineService->selectProduct(4);
@@ -94,12 +94,12 @@ final class VendingMachineServiceTest extends TestCase
      */
     public function testGetChange(): void
     {
-        $vendingMachineService = new VendingMachineService(
+        $vendingMachineService = new VendingMachineService([
             new Product('Soda', 'soda', 137),
             new Product('Water', 'water', 85),
             new Product('Juice', 'juice', 111),
             new Product('Sandwich', 'sandwich', 272),
-        );
+        ]);
 
         $product = $vendingMachineService->addCoin(100)
             ->addCoin(100)
