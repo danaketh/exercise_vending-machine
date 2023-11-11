@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-final readonly class Product
+final class Product
 {
     public function __construct(private string $name, private string $key, private int $price)
     {
