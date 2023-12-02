@@ -18,7 +18,7 @@
         "symfony/flex": "^2",
         "symfony/framework-bundle": "6.4.*",
         "symfony/runtime": "6.4.*",
-        "symfony/yaml": "6.3.*"
+        "symfony/yaml": "7.0.*"
     },
     "require-dev": {
         "kubawerlos/php-cs-fixer-custom-fixers": "^3.16",
