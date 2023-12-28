@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16bb08b48e76317093c301b3b43a36c3",
+    "content-hash": "e3cb37714fc4ae3025088ceb7859ecfa",
     "packages": [
         {
             "name": "psr/cache",
@@ -4550,16 +4550,16 @@
         },
         {
             "name": "spaze/phpstan-disallowed-calls",
-            "version": "v2.16.1",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spaze/phpstan-disallowed-calls.git",
-                "reference": "1500f90ff6a705009731cc14e50d4faf2d202bf3"
+                "reference": "048ad861d6d0ef0f202eedd374123ac3180eb948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/1500f90ff6a705009731cc14e50d4faf2d202bf3",
-                "reference": "1500f90ff6a705009731cc14e50d4faf2d202bf3",
+                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/048ad861d6d0ef0f202eedd374123ac3180eb948",
+                "reference": "048ad861d6d0ef0f202eedd374123ac3180eb948",
                 "shasum": ""
             },
             "require": {
@@ -4605,7 +4605,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spaze/phpstan-disallowed-calls/issues",
-                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v2.16.1"
+                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v3.0.0"
             },
             "funding": [
                 {
@@ -4613,7 +4613,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-28T15:29:27+00:00"
+            "time": "2023-12-22T13:42:25+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
