@@ -4545,21 +4545,21 @@
         },
         {
             "name": "spaze/phpstan-disallowed-calls",
-            "version": "v3.0.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spaze/phpstan-disallowed-calls.git",
-                "reference": "048ad861d6d0ef0f202eedd374123ac3180eb948"
+                "reference": "fe566326b015674429e1a67a5343183942f493b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/048ad861d6d0ef0f202eedd374123ac3180eb948",
-                "reference": "048ad861d6d0ef0f202eedd374123ac3180eb948",
+                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/fe566326b015674429e1a67a5343183942f493b9",
+                "reference": "fe566326b015674429e1a67a5343183942f493b9",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.10"
+                "phpstan/phpstan": "^1.10.52"
             },
             "require-dev": {
                 "nette/neon": "^3.2",
@@ -4567,8 +4567,7 @@
                 "php-parallel-lint/php-console-highlighter": "^1.0",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpunit/phpunit": "^8.5 || ^10.1",
-                "spaze/coding-standard": "^1.7",
-                "symfony/polyfill-php80": "^1.27"
+                "spaze/coding-standard": "^1.7"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -4600,7 +4599,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spaze/phpstan-disallowed-calls/issues",
-                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v3.0.0"
+                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v3.1.1"
             },
             "funding": [
                 {
@@ -4608,7 +4607,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-22T13:42:25+00:00"
+            "time": "2024-01-22T22:10:47+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
