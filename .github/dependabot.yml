@@ -6,10 +6,6 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
-    assignees:
-      - "danaketh"
-    reviewers:
-      - "danaketh"
     labels:
       - "dependencies"
       - "gh-actions"
@@ -20,10 +16,6 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 5
-    assignees:
-      - "danaketh"
-    reviewers:
-      - "danaketh"
     labels:
       - "dependencies"
       - "composer"
