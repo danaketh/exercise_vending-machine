@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  phpunit:
+  phpstan:
     name: PHPStan
     runs-on: ubuntu-latest
     steps:
