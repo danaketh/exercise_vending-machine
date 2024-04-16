@@ -7,16 +7,13 @@ namespace App\Tests\Unit\Service;
 use App\Exception\NotEnoughMoneyException;
 use App\Model\Product;
 use App\Service\VendingMachineService;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @coversDefaultClass \App\Service\VendingMachineService
- */
+#[CoversClass(\App\Service\VendingMachineService::class)]
 final class VendingMachineServiceTest extends TestCase
 {
-    /**
-     * @covers ::getProducts
-     */
+    #[CoversMethod(\App\Service\VendingMachineService::class, 'getProducts')]
     public function testGetProducts(): void
     {
         $vendingMachineService = new VendingMachineService([
@@ -29,9 +26,7 @@ final class VendingMachineServiceTest extends TestCase
         self::assertCount(4, $vendingMachineService->getProducts());
     }
 
-    /**
-     * @covers ::addCoin
-     */
+    #[CoversMethod(\App\Service\VendingMachineService::class, 'addCoin')]
     public function testAddCoin(): void
     {
         $vendingMachineService = new VendingMachineService([
@@ -45,9 +40,7 @@ final class VendingMachineServiceTest extends TestCase
         self::assertEquals(156, $vendingMachineService->getInsertedAmount());
     }
 
-    /**
-     * @covers ::reset
-     */
+    #[CoversMethod(\App\Service\VendingMachineService::class, 'reset')]
     public function testReset(): void
     {
         $vendingMachineService = new VendingMachineService([
@@ -67,9 +60,7 @@ final class VendingMachineServiceTest extends TestCase
         self::assertEquals([100 => 2, 50 => 1, 25 => 1, 10 => 1, 1 => 2], $change);
     }
 
-    /**
-     * @covers ::selectProduct
-     */
+    #[CoversMethod(\App\Service\VendingMachineService::class, 'selectProduct')]
     public function testSelectProduct(): void
     {
         $vendingMachineService = new VendingMachineService([
@@ -89,9 +80,7 @@ final class VendingMachineServiceTest extends TestCase
         self::assertEquals(28, $vendingMachineService->getInsertedAmount());
     }
 
-    /**
-     * @covers ::getChange
-     */
+    #[CoversMethod(\App\Service\VendingMachineService::class, 'getChange')]
     public function testGetChange(): void
     {
         $vendingMachineService = new VendingMachineService([
