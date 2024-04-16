@@ -6,7 +6,6 @@
     <ini name="error_reporting" value="-1"/>
     <ini name="memory_limit" value="128M"/>
   </php>
-  <testsuites/>
   <logging>
     <testdoxText outputFile="php://stdout"/>
   </logging>
