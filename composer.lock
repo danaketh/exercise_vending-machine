@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20a0cce39d3b16418dbebd1de47643ae",
+    "content-hash": "27ee5c449b94c3313801d4adb9ab7c01",
     "packages": [
         {
             "name": "psr/cache",
@@ -1933,7 +1933,7 @@
         },
         {
             "name": "symfony/runtime",
-            "version": "v7.0.7",
+            "version": "v7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/runtime.git",
@@ -1992,7 +1992,7 @@
                 "runtime"
             ],
             "support": {
-                "source": "https://github.com/symfony/runtime/tree/v7.0.7"
+                "source": "https://github.com/symfony/runtime/tree/v7.1.0"
             },
             "funding": [
                 {
