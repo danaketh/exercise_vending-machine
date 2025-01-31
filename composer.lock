@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61d9d02399bd9f144c09b3b686b1ccaf",
+    "content-hash": "edc936a2366f2b8b592d6d55727d4b60",
     "packages": [
         {
             "name": "psr/cache",
@@ -3248,16 +3248,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.7",
+            "version": "1.12.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0"
+                "reference": "e0bb5cb78545aae631220735aa706eac633a6be9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e0bb5cb78545aae631220735aa706eac633a6be9",
+                "reference": "e0bb5cb78545aae631220735aa706eac633a6be9",
                 "shasum": ""
             },
             "require": {
@@ -3302,7 +3302,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-18T11:12:07+00:00"
+            "time": "2025-01-21T14:50:05+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -5290,29 +5290,29 @@
         },
         {
             "name": "spaze/phpstan-disallowed-calls",
-            "version": "v3.5.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spaze/phpstan-disallowed-calls.git",
-                "reference": "ad538e67295d21e42b74e8cae0a5b2630fa17356"
+                "reference": "eb3841ed93768e5754970e6da03d93d3a06c1e6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/ad538e67295d21e42b74e8cae0a5b2630fa17356",
-                "reference": "ad538e67295d21e42b74e8cae0a5b2630fa17356",
+                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/eb3841ed93768e5754970e6da03d93d3a06c1e6a",
+                "reference": "eb3841ed93768e5754970e6da03d93d3a06c1e6a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.12.6"
+                "php": "^7.4 || ^8.0",
+                "phpstan/phpstan": "^1.12.6 || ^2.0"
             },
             "require-dev": {
-                "nette/neon": "^3.2",
+                "nette/neon": "^3.3.1",
                 "nikic/php-parser": "^4.13 || ^5.0",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/phpstan-deprecation-rules": "^1.2",
-                "phpunit/phpunit": "^8.5 || ^10.1 || ^11.0",
+                "phpstan/phpstan-deprecation-rules": "^1.2 || ^2.0",
+                "phpunit/phpunit": "^8.5.14 || ^10.1 || ^11.0",
                 "spaze/coding-standard": "^1.7"
             },
             "type": "phpstan-extension",
@@ -5345,7 +5345,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spaze/phpstan-disallowed-calls/issues",
-                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v3.5.0"
+                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v4.2.1"
             },
             "funding": [
                 {
@@ -5353,7 +5353,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-11T01:20:38+00:00"
+            "time": "2025-01-23T17:42:09+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
